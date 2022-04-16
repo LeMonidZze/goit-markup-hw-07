@@ -1,0 +1,49 @@
+@import "../utils/button-placeholder";
+
+.hero {
+    background-color: var(--hero-background-color);
+    color: var(--hero-accent-color);
+    padding: 200px 0;
+    max-width: 1600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: linear-gradient(to right,
+            var(--background-overlay),
+            var(--background-overlay)),
+        url(../img/background-hero.jpg);
+}
+
+.hero__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.hero__button {
+    
+    padding: 10px 32px;
+    @extend %button;
+
+    transition-property: color,
+    background-color,
+    box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+
+    &:hover,
+    &:focus {
+        color: var(--hero-accent-color);
+        background-color: var(--button-hover-hero);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}

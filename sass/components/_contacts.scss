@@ -1,0 +1,36 @@
+@import "../utils/animations";
+.contacts {
+    display: flex;
+    margin-left: auto;
+    color: var(--paragrapg-contacts-color);
+}
+
+.contacts__link {
+    color: currentColor;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    display: flex;
+    align-items: center;
+
+    transition-property: color;
+    @extend %animation;
+
+    &:hover,
+    &:focus {
+        color: var(--title-accent-color);
+    }
+}
+
+.contacts__icon-mail {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.contacts__icon-phone {
+    margin-right: 10px;
+    fill: currentColor;
+}

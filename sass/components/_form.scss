@@ -1,0 +1,128 @@
+
+@import "../utils/button-placeholder";
+@import "../utils/animations";
+
+.form {
+    width: 100%;
+    padding: 40px;
+}
+
+.form__title {
+    margin-bottom: 12px;
+
+    color: var(--primary-text-color);
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.form__label {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+
+    &:nth-last-child(3) {
+        margin-bottom: 20px;
+    }
+    
+    &:hover>.form__icon,
+    &:focus-within>.form__icon {
+        fill: var(--title-accent-color);
+    }
+    
+    &:hover>.form__input,
+    &-within>.form__input {
+        border-color: var(--title-accent-color);
+    }
+    
+   &:hover>.form__comment,
+   &:focus-within>.form__comment {
+        border-color: var(--title-accent-color);
+    }
+}
+
+.form__name {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--paragrapg-contacts-color);
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+}
+
+.form__input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    transition-property: fill, border-color;
+    @extend %animation;
+}
+
+.form__icon {
+    position: absolute;
+    top: 48%;
+    left: 12px;
+
+    display: inline-block;
+
+    fill: var(--primary-text-color);
+
+    transition-property: fill, border-color;
+    @extend %animation;
+}
+
+.form__agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__policy {
+    text-decoration: underline solid var(--title-accent-color);
+    color: var(--title-accent-color);
+}
+
+.form__button {
+    @extend %button;
+    padding: 10px 55px;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    display: flex;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.06em;
+
+    transition-property: color, background-color, box-shadow;
+    @extend %animation;
+
+    &:hover,
+    &:focus {
+        color: var(--hero-accent-color);
+        background-color: var(--button-hover-hero);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}

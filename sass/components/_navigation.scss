@@ -1,0 +1,56 @@
+@import "../utils/navigation-placeholder";
+@import "../utils/animations";
+
+.navigation {
+    display: flex;
+}
+
+.navigation-header {
+    margin-left: 93px;
+}
+
+.navigation__list {
+    display: flex;
+}
+
+.navigation__item {
+    margin-right: var(--common-margin-gap);
+
+    transition-property: fill, color;
+    @extend %animation;
+
+    &:hover {
+        fill: var(--title-accent-color);
+        color: var(--title-accent-color);
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.navigation__link {
+    @extend %navigation-link;
+    
+    &:hover,
+    &:focus {
+        color: var(--title-accent-color);
+    }
+
+    &--active {
+        color: var(--title-accent-color);
+    }
+
+    &--active::after {
+        content: '';
+
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+
+        background-color: var(--title-accent-color);
+        border-radius: 2px;
+    }
+}

@@ -1,0 +1,49 @@
+@import "../utils/animations";
+.social-media__list {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+
+    &>.social-media__item {
+        margin-right: 10px;
+    }
+    
+    &>.social-media__item:last-child {
+        margin-right: 0;
+    }
+}
+
+.social-media__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media__link {
+    color: var(--patron-customers-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: var(--hero-accent-color);
+
+    transition-property: color, background-color;
+    @extend %animation;
+
+    &:hover,
+    &:focus {
+        color: var(--hero-accent-color);
+        background-color: var(--title-accent-color);
+    }
+}
+
+.social-media__icon {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}

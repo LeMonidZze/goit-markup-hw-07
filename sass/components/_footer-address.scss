@@ -1,0 +1,57 @@
+@import "../utils/animations";
+.footer-page__address {
+    flex-grow: 1;
+}
+
+.address {
+    margin-top: 20px;
+    display: flex;
+}
+
+.address__item {
+    margin-bottom: 9px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.address__item:last-child {
+    margin-bottom: 0;
+}
+
+.address__geoposition {
+    color: var(--hero-accent-color);
+    text-decoration: none;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    transition-property: color;
+    @extend %animation;
+
+    &:hover,
+    &:focus {
+        color: var(--title-accent-color);
+    }
+}
+
+.address-link {
+    color: var(--hero-accent-color);
+    opacity: 60%;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    transition-property: color;
+    @extend %animation;
+
+    &:hover,
+    &:focus {
+        color: var(--title-accent-color);
+    }
+}
+

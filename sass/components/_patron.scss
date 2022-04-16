@@ -1,0 +1,65 @@
+@import "../utils/animations";
+.patron-section__heading {
+    margin-bottom: 50px;
+
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+
+    color: var(--primary-text-color);
+}
+
+.patron-section__list {
+    display: flex;
+
+    &>.patron-section__item {
+        margin-right: 30px;
+    }
+    
+    &>.patron-section__item:last-child {
+        margin-right: 0;
+    }
+}
+
+.patron-section__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.patron-section__picture {
+    padding: 16px 32px;
+}
+
+.patron-section__icon {
+    width: 106px;
+    height: 60px;
+}
+
+.patron-section__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 92px;
+
+    text-decoration: none;
+    fill: var(--patron-customers-color);
+    border-radius: 4px;
+    border: 1px solid var(--patron-customers-color);
+
+    transition-property: fill, color, border-color;
+    @extend %animation;
+
+    &:hover,
+    &:focus {
+        fill: var(--title-accent-color);
+        color: var(--title-accent-color);
+        border-color: var(--title-accent-color);
+    }
+}
+

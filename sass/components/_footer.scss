@@ -1,0 +1,15 @@
+.page-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--hero-background-color);
+}
+
+.page-footer__logo {
+    color: var(--hero-accent-color);
+}
+
+.footer {
+    display: flex;
+    align-items: baseline;
+}
+
